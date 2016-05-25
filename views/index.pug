@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title Welcome to RasPiBox
+    style
+                include theme.css
+
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Press+Start+2P', type='text/css')
+  body
+    div(style='width:800px; margin:0 auto;')
+      h3 RasPiBox
+      p Welcome to the RasPiBox Rom Manager !
+      p Chose one of the following options :
+    #tableID
+      a(href='') See the Roms on your Pi
+      a(href='http://localhost:3000/api/V1/rom/') See the Roms on your computer
+      a(href='') Scrape the Roms on your Pi
+      a(href='') Scrape the Roms on your computer

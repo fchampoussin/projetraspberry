@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js')
+    script(src='/bin/script.js')
+    script(src='/bin/listerJeu.js')
+    title Welcome to RasPiBox
+
+    style
+            include css_jeu_style.css
+
+  body
+    div(style='width:800px; margin:0 auto;')
+      h3 RasPiBox
+      p Here are the roms listed on your raspberry pi
+      p You can select which ones you wish to delete, or click one to see the details.
+    #tableID
+      table.table-list(data-currentpage='1')
+        thead
+          th
+            button.sort(type='button', data-sort='sortID')
+              | Name
+              i.caret
+          th
+            button.sort(type='button', data-sort='sortDesc')
+              | Description
+              i.caret
+          th
+            button.sort.textright(type='button', data-sort='sortTotal')
+              | Total
+              i.caret
+        // IMPORTANT, class="list" must be on tbody
+        tbody.list
+        - var n = 0
+        - var h = name.length
+          while n < h
+            tr
+              td.minify.sortID
+                a(href='http://localhost:3000/api/v1/rom/id/'+id[n]) #{name[n]}
+              td.sortDesc Alpha Bravo Charlie
+              td.minify.textright.sortTotal 26.00
+              - n++
+        tfoot
+          tr
+            td.table-footer(colspan='3')
+              .table-pagination
+                button.btn-tablepage.jTablePagePrev(type='button') «
+                ul.pagination
+                button.btn-tablepage.jTablePageNext(type='button') »
+              .table-filter
+                input.search(placeholder='Search ')
+
+
+
+

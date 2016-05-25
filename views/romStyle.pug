@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+
+    style
+        include romStyle.css
+    meta(charset="utf-8")
+    title= name
+  body
+    .movie-card
+      .container
+        a(href='#')
+          img.cover(src= image, alt='cover')
+        .hero
+          .details
+            .title1= name
+
+              span
+            .title2 Sous titre
+
+              // number of likes
+          // end details
+        // end hero
+        .description
+          .column1
+            span.tag= genre
+          // end column1
+          .column2
+            p.oneline= releasedate
+            p.oneline= developer
+            p.oneline= publisher
+            p= desc
+
+
+          // end column2
+        // end description
+      // end container
+    // end movie-card
