@@ -169,6 +169,14 @@ app.get('/bin/listerJeu.js', function (req, res) {
 
     res.sendFile(path.join(__dirname + "/listerJeu.js"));
 });
+app.get('/views/css_jeu_style.css', function (req, res) {
+
+    res.sendFile(path.join(__dirname + "/../views/css_jeu_style.css"));
+});
+app.get('/bin/jquery.easyPaginate.js', function (req, res) {
+
+    res.sendFile(path.join(__dirname + "jquery.easyPaginate.js"));
+});
 
 
 
