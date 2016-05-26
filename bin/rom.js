@@ -16,7 +16,7 @@ module.exports = function(db) {
     "genre": {"type": "String"},
     "rating": { "type": "String" },
     "player": { "type": "String" },
-    "console": {"type": mongoose.Schema.ObjectId, ref: 'Console'}
+    "console": {"type": "String"}//mongoose.Schema.ObjectId, ref: 'Console'}
   };
 
 

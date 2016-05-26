@@ -31,6 +31,7 @@ module.exports = function(wagner) {
     return function(req, res) {
       var arrayName = [];
       var arrayId = [];
+      var arrayConsole= [];
       var resFin = res;
       Rom.find({}, function(err, res)
       {
@@ -38,9 +39,10 @@ module.exports = function(wagner) {
         for (index = 0; index < res.length; ++index) {
           arrayName.push(res[index].name);
           arrayId.push(res[index]._id);
+          arrayConsole.push(res[index].console);
         }
 
-        resFin.render('listePugGame', { name: arrayName, id: arrayId});
+        resFin.render('listePugGame', { name: arrayName, id: arrayId, console : arrayConsole});
       });
     };
   }));

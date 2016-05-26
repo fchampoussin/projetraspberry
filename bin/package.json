@@ -12,7 +12,10 @@
     "superagent": "1.2.0",
     "underscore": "1.5.2",
     "wagner-core": "0.1.0",
-    "socket.io-client": "latest"
+    "socket.io-client": "latest",
+    "xhr2": "latest",
+    "q": "latest",
+    "q": "latest"
   },
   "devDependencies": {
     "gulp": "3.8.11",
